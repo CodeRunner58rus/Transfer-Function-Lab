@@ -54,9 +54,14 @@ def main():
 			print(f"Корни полинома b4 {data.rootsB4}");
 			input();
 		elif subProgramNum == 0x4:
-			pass;
+			data.stabilityHurwitz()
+			print(data.Y1, data.Y2, data.Y3) 
+			print(data.delta1, data.delta2, data.delta3)
+			if data.systemStability == True:
+				print("System stability")
+			else: print("System NOT stability")
 		elif subProgramNum == 0x5:
-			pass;  
+			data.impulseProperties()  
 
 if __name__ == '__main__':
 	main()

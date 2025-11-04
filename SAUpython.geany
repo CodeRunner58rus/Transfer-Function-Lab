@@ -20,6 +20,7 @@ indent_mode=2
 [project]
 name=SAUpython
 base_path=/home/ZaharovNS/projects/SAUpython/
+description=
 
 [long line marker]
 long_line_behaviour=1
@@ -27,9 +28,9 @@ long_line_column=72
 
 [files]
 current_page=2
-FILE_NAME_0=1531;Python;0;EUTF-8;1;1;0;%2Fhome%2FZaharovNS%2Fprojects%2FSAUpython%2Fmain.py;0;4
+FILE_NAME_0=1834;Python;0;EUTF-8;1;1;0;%2Fhome%2FZaharovNS%2Fprojects%2FSAUpython%2Fmain.py;0;4
 FILE_NAME_1=382;Python;0;EUTF-8;1;1;0;%2Fhome%2FZaharovNS%2Fprojects%2FSAUpython%2Fmain_menu.py;0;4
-FILE_NAME_2=3128;Python;0;EUTF-8;1;1;0;%2Fhome%2FZaharovNS%2Fprojects%2FSAUpython%2Fdata.py;0;4
+FILE_NAME_2=3809;Python;0;EUTF-8;1;1;0;%2Fhome%2FZaharovNS%2Fprojects%2FSAUpython%2Fdata.py;0;4
 
 [VTE]
 last_dir=/home/ZaharovNS

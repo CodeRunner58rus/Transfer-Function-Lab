@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt
+import math
 #Количество элементов полинома
 count = 4;
 #Полином а (знаменатель)
@@ -15,6 +17,7 @@ b4 = None;
 rootsB3 = None;
 
 #дельта для Гурвица
+systemStability = False;
 delta1 = None
 delta2 = None
 delta3 = None
@@ -155,6 +158,32 @@ def solveRootPolinomB4():
 
 def stabilityHurwitz():
 	global delta1, delta2, delta3
-	global Y1, Y2, Y3 
-	#TODO ДОДЕЛАТЬ
-	pass
+	global Y1, Y2, Y3, systemStability 
+	"""generation Y-matrix"""
+	Y1 = []
+	Y1.append([a[2], a[0], 0   ])
+	Y1.append([a[3], a[1], 0   ])
+	Y1.append([0,    a[2], a[0]])
+	Y2 = []
+	Y2.append([a[2], a[0]])
+	Y2.append([a[3], a[1]])
+	Y3 = []
+	Y3.append([a[2]])
+	delta3 = np.linalg.det(np.array(Y1))
+	delta2 = np.linalg.det(np.array(Y2))
+	delta1 = np.linalg.det(np.array(Y3))
+	if delta1>0 and delta2>0 and delta3>0:
+		systemStability = True
+	else: systemStability = False
+
+def impulseProperties():
+	C1 = 3.73
+	C2 = -22.4
+	C3 = 18.67
+	t = np.linspace(0, 10,1000)
+	w = []
+	for i in t:
+		w.append(C1*math.exp(rootsA[2]*i)+C2*math.exp(rootsA[1]*i)+C3*math.exp(rootsA[0]*i))
+	plt.plot(t, w)
+	plt.show()
+	
